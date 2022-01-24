@@ -1,0 +1,11 @@
+
+.button-create-person__primary{
+   display: flex;
+   align-items: center;
+   gap: 27px;
+
+}
+.container__header{
+    display: flex;
+    justify-content: space-between;
+}

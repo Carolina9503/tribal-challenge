@@ -1,0 +1,38 @@
+.App {
+  text-align: left;
+}
+.title {
+  margin-top: 35px;
+}
+.name {
+  margin-top: 20px;
+  color: #6b6e74;
+}
+input {
+  border: none !important;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.calendar {
+  display: inline-block;
+}
+.container {
+  border: 5%;
+  border-radius: 29px;
+  padding-left: 60px;
+}
+.primary {
+  background-color: #000000;
+  color: white;
+}
+.secondary {
+  background-color: #f8f8f8;
+  color: #000000;
+  border: none;
+}
+.buttons {
+  display: flex;
+  gap: 2rem;
+  margin-top: 44px;
+  padding-bottom: 40px;
+}

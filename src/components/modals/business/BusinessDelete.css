@@ -1,0 +1,11 @@
+.danger{
+    color:#9A0000;
+    background-color: #FFD5D5;
+    border: none;
+}
+.container{
+    padding-top: 35px;
+}
+.modal-content{
+    width: 550px;
+}

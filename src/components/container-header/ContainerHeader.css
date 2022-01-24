@@ -1,0 +1,10 @@
+.container-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
