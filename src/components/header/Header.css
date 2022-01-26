@@ -1,19 +1,23 @@
-.logo-hb{
-    height:40px;
-    width:40px;
-    background:#1A1A1A;
-    border-radius:20px;
-    margin-left: 25px;
-    display: inline-block;
-    padding-top: 10px;
+.logo-hb {
+  height: 40px;
+  width: 40px;
+  background: #1a1a1a;
+  border-radius: 20px;
+  margin-left: 25px;
+  display: inline-block;
+  padding-top: 10px;
 }
-.logo-hb__text{    
-    font-size: 14px;
-    color:#F6F6F6; 
-    text-align: center;
+.logo-hb__text {
+  font-size: 14px;
+  color: #f6f6f6;
+  text-align: center;
 }
-.navbar{
-   margin-top: 86px; 
-   padding-left: 100px;
-   padding-right: 175px;
+.navbar {
+  margin-top: 86px;
+  padding-left: 100px;
+  padding-right: 175px;
+}
+.flags {
+  border: none;
+  background: white;
 }

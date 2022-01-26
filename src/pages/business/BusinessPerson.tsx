@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { ImPencil } from "react-icons/im";
 import { MdDeleteOutline } from "react-icons/md";
-import { Button } from "../button/Button";
+import { Button } from "../../components/button/Button";
 import icon from "../../assets/icon/Icon.png";
 import "./BusinessPerson.css";
-import ContainerHeader from "../container-header/ContainerHeader";
-import { Modal } from "react-bootstrap";
-import { PersonModal } from "../modals/person/PersonModal";
+import ContainerHeader from "../../components/container-header/ContainerHeader";
+import { PersonModal } from "../../components/modals/person/PersonModal";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../redux/reducers";
@@ -15,9 +14,12 @@ import { BusinessReducersProps } from "../../redux/reducers/businessReducers";
 import { getBusinessDetails } from "../../redux/actions/businessActions";
 import { getPersonList, resetPerson } from "../../redux/actions/personActions";
 import { PersonAttr } from "../../services/person";
-import { PersonDelete } from "../modals/person/PersonDelete";
+import { PersonDelete } from "../../components/modals/person/PersonDelete";
+import Layout from "../../components/layout/Layout";
+import { useTranslation } from "react-i18next";
 
 export function BusinessPerson() {
+  const [t, i18n] = useTranslation("global");
   const dispatch = useDispatch();
   const { id: businessId } = useParams<{ id: string }>();
   const businessDetails = useSelector(
@@ -61,7 +63,7 @@ export function BusinessPerson() {
   };
 
   return (
-    <div className="container">
+    <Layout>
       <div>
         <ContainerHeader
           title={businessDetails?.businessData?.name}
@@ -69,14 +71,9 @@ export function BusinessPerson() {
             <>
               <img src={icon} alt="" width="24px" height="24px" />
               <Button
-                name="Create Person"
+                name={t("button.create-person")}
                 styleButton="primary"
                 onClick={() => openPersonModal(null)}
-              />
-              <Button
-                name="Reset Person"
-                styleButton="primary"
-                onClick={() => setSelectedPerson(undefined)}
               />
             </>
           }
@@ -121,6 +118,6 @@ export function BusinessPerson() {
         onHide={toggleDeletePerson}
         onSuccess={onSuccessDelete}
       />
-    </div>
+    </Layout>
   );
 }

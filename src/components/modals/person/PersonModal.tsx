@@ -67,12 +67,14 @@ export const PersonModal = ({
   }, [personsData.loading, personsData.success, onSuccess, personsData.type]);
 
   useEffect(() => {
-    if (person) {
+    if (!show) {
+      reset(initialState);
+    } else if (person) {
       reset(person || undefined);
     } else {
       reset(initialState);
     }
-  }, [person, reset]);
+  }, [person, reset, show]);
 
   return (
     <Modal show={show} onHide={onHide}>

@@ -67,12 +67,14 @@ export const BusinessModal = ({
   ]);
 
   useEffect(() => {
-    if (business) {
+    if (!show) {
+      reset(initialState);
+    } else if (business) {
       reset(business || undefined);
     } else {
       reset(initialState);
     }
-  }, [business, reset]);
+  }, [business, reset, show]);
 
   return (
     <Modal show={show} onHide={onHide}>

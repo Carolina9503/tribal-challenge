@@ -11,13 +11,18 @@ import {
 import { RootState } from "../../redux/reducers";
 import { BusinessReducersProps } from "../../redux/reducers/businessReducers";
 import { BusinessAttr } from "../../services/business";
-import "../business/BusinessList.css";
-import { Button } from "../button/Button";
-import ContainerHeader from "../container-header/ContainerHeader";
-import { BusinessDelete } from "../modals/business/BusinessDelete";
-import { BusinessModal } from "../modals/business/BusinessModal";
+import "./BusinessList.css";
+import { Button } from "../../components/button/Button";
+import ContainerHeader from "../../components/container-header/ContainerHeader";
+import { BusinessDelete } from "../../components/modals/business/BusinessDelete";
+import { BusinessModal } from "../../components/modals/business/BusinessModal";
+
+import { useTranslation } from "react-i18next";
+import Layout from "../../components/layout/Layout";
 
 export const BusinessList = () => {
+  const [t, i18n] = useTranslation("global");
+
   const dispatch = useDispatch();
   const businessData = useSelector(
     (state: RootState) => state.business as BusinessReducersProps
@@ -57,14 +62,14 @@ export const BusinessList = () => {
   };
 
   return (
-    <>
+    <Layout>
       <div>
         <div>
           <ContainerHeader
-            title="Business"
+            title={t("business.title")}
             rightContent={
               <Button
-                name="Create Business"
+                name={t("button.create-business")}
                 styleButton="primary"
                 onClick={() => openBusinessModal(undefined)}
               />
@@ -114,6 +119,6 @@ export const BusinessList = () => {
         onSuccess={onSuccessDelete}
         onHide={toggleDeleteBusiness}
       />
-    </>
+    </Layout>
   );
 };

@@ -1,0 +1,19 @@
+{
+    "sidebar": {
+        "overview":"Overview",
+        "tribal-pay":"Tribal Pay",
+        "tribal-credit":"Tribal Credit",
+        "payments":"Payments",
+        "notifications":"Notifications",
+        "users":"Users"
+
+    },
+    "business": {
+        "title":"Business"
+    },
+    "button": {
+        "create-business":"Create Business",
+        "create-person":"Create Person"
+
+    }
+}

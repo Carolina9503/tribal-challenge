@@ -1,0 +1,18 @@
+{
+    "sidebar": {
+        "overview":"Información General",
+        "tribal-pay":"Pago Tribal",
+        "tribal-credit":"Credito Tribal",
+        "payments":"Pagos",
+        "notifications":"Notificaciones",
+        "users":"Usuarios"
+
+    },
+    "business": {
+        "title":"Negocios"
+    },
+    "button": {
+        "create-business":"Crear Negocio",
+        "create-person":"Crear Persona"
+    }
+}
